@@ -1,0 +1,22 @@
+{
+  "name": "node-demo",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "esbuild src/index.ts --bundle --platform=node --outfile=dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aiyongbao/go-moon.git"
+  },
+  "author": "wsafight",
+  "bugs": {
+    "url": "https://github.com/aiyongbao/go-moon/issues"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "esbuild": "^0.15.3"
+  }
+}
