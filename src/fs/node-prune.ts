@@ -3,9 +3,6 @@ import { join } from 'node:path'
 import { invariant } from '../utils/invariant'
 import { needRemoveDir, needRemoveExt, needRemoveFile } from './const'
 
-
-
-
 export const findNodeModulesThenPrune = async (path: string) => {
   invariant(!path.endsWith('node_modules'), 'remove directory must is "node_modules"')
   const absolutePath = path.startsWith('/') ? path : join(__dirname, path)
