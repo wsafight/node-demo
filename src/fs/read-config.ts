@@ -5,7 +5,8 @@ import {
 import { resolve } from 'node:path'
 
 interface AppConfig {
-
+  logLevel: string;
+  logFile: string;
 }
 
 export const getConfig = (configPath: string): AppConfig => {

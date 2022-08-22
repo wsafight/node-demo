@@ -1,4 +1,4 @@
-import { readdirSync, rm, statSync, unlinkSync } from 'node:fs'
+import { readdirSync, rmSync, statSync, unlinkSync } from 'node:fs'
 import { join, extname } from 'node:path'
 import { invariant } from '../utils/invariant'
 import { needRemoveDir, needRemoveExt, needRemoveFile } from './const'
@@ -19,7 +19,7 @@ export const findNodeModulesThenPrune = async (path: string) => {
       if (statSync(fullPath).isDirectory()) {
         if (needRemoveDir.has(file)) {
           dirCount++
-          rm(fullPath, { force: true, recursive: true }, () => {})
+          rmSync(fullPath, { force: true, recursive: true })
         } else {
           prune(fullPath)
         }
