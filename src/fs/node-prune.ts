@@ -1,5 +1,5 @@
 import { readdirSync, rm, statSync, unlinkSync } from 'node:fs'
-import { join } from 'node:path'
+import { join, extname } from 'node:path'
 import { invariant } from '../utils/invariant'
 import { needRemoveDir, needRemoveExt, needRemoveFile } from './const'
 
@@ -30,12 +30,11 @@ export const findNodeModulesThenPrune = async (path: string) => {
         unlinkSync(fullPath)
         return
       }
-      if (fullPath.indexOf('.') > 0) {
-        const splitName = fullPath.split('.');
-        if (needRemoveExt.has(`.${splitName[splitName.length - 1]}`)) {
-          fileCount++
-          unlinkSync(fullPath)
-        }
+
+      const fileExt = extname(file)
+      if (needRemoveDir.has(fileExt)) {
+        fileCount++
+        unlinkSync(fullPath)
       }
     })
   }
