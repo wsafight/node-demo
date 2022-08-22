@@ -32,7 +32,7 @@ export const findNodeModulesThenPrune = async (path: string) => {
       }
 
       const fileExt = extname(file)
-      if (needRemoveDir.has(fileExt)) {
+      if (needRemoveExt.has(fileExt)) {
         fileCount++
         unlinkSync(fullPath)
       }
