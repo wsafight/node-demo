@@ -20,3 +20,8 @@
 * 调试
 
 * 部署
+
+* 性能
+* * [使用 Rust 编写 N-API](/perf/napi-rs.md)
+* * [使用 Neon 在 Node 中嵌入 Rust](/perf/neon.md)
+* * [WASM 和 WASI](/perf/wasm.md)
