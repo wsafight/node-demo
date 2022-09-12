@@ -22,6 +22,12 @@
 
 * 调试
 
+* 安全
+* * [处理外部数据校验](/safe/vaildate.md)
+* * [服务器返回信息](/safe/out-check.md)
+* * [文件操作](/safe/file.md)
+* * [配置与环境](/safe/env.md)
+
 * 部署
 
 * 性能
