@@ -7,7 +7,7 @@
 JavaScript 不擅长计算密集型的应用，这也是目前各种前端打包、构建工具转向 Rust 或者 Go 的主要原因。不过对于个人以及目前的团队来说，Node 完全够用了。在遇到性能不够的情况完全可以使用 [N-API](https://napi.rs/) 或者 [WASM](https://webassembly.org/) 去优化。
 
 
-《通过例子学 Node》（Node By Example）内容由一系列可运行的实例组成，通过这些例子阐明了 Node 基本和进阶功能。
+《通过例子学 Node》（Node By Example）内容由一个主题开始，然后构建一系列的实例。通过这些例子阐明了 Node 基本和进阶功能。
 
 现在让我们开始学习吧！
 
